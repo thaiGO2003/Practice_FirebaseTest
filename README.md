@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/6448dab8-04b3-41c6-9a2f-8f459a3dcca5)
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,6 +6,7 @@
     <title>Hướng Dẫn Cài Đặt Dự Án</title>
 </head>
 <body>
+        <img src="https://github.com/user-attachments/assets/6448dab8-04b3-41c6-9a2f-8f459a3dcca5" alt="Hướng dẫn cài đặt" style="max-width: 100%; height: auto;">
     <h1>Hướng Dẫn Cài Đặt Dự Án</h1>
 
     <h2>1. Clone repository</h2>
