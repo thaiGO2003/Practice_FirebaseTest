@@ -7,7 +7,7 @@
 
 ```bash
 git clone <your-repository-url>
-2. Cài Đặt Dependencies
+##2. Cài Đặt Dependencies
 Đi đến thư mục dự án và cài đặt các dependencies cần thiết:
 
 bash
@@ -15,7 +15,7 @@ bash
 npm install
 # Hoặc nếu bạn sử dụng Yarn:
 # yarn install
-3. Cấu Hình Biến Môi Trường
+##3. Cấu Hình Biến Môi Trường
 Để ứng dụng có thể hoạt động với Firebase và các dịch vụ khác, bạn cần cấu hình các biến môi trường.
 
 Tạo tệp .env
@@ -54,7 +54,7 @@ REACT_APP_STORAGE_BUCKET=fir-test-236ee.appspot.com
 REACT_APP_MESSAGING_SENDER_ID=699695973700
 REACT_APP_APP_ID=1:699695973700:web:b69a7b1605f4a15ec50311
 REACT_APP_MEASUREMENT_ID=G-0HYMG5FZTV
-4. Chạy Dự Án
+##4. Chạy Dự Án
 Bây giờ bạn đã cấu hình các biến môi trường, bạn có thể chạy dự án.
 
 Đối với Android:
@@ -69,7 +69,7 @@ npx react-native run-ios
 bash
 
 npm start
-5. Lưu Ý Quan Trọng
+##5. Lưu Ý Quan Trọng
 Không bao giờ commit tệp .env vào hệ thống kiểm soát phiên bản. Nó chứa các thông tin nhạy cảm cần phải được bảo mật. Đảm bảo rằng tệp .env đã được thêm vào .gitignore.
 Nếu bạn đang hợp tác trong dự án, chỉ chia sẻ hướng dẫn thiết lập tệp .env, nhưng không chia sẻ tệp .env trực tiếp.
 6. Khắc Phục Lỗi
@@ -78,14 +78,14 @@ Nếu bạn gặp phải bất kỳ vấn đề nào, hãy kiểm tra các vấn
 Đảm bảo rằng bạn đã điền đầy đủ tất cả các biến môi trường trong tệp .env.
 Kiểm tra lại cấu hình Firebase của bạn và đảm bảo bạn đã sao chép chính xác các giá trị từ cài đặt Firebase.
 Nếu có lỗi liên quan đến Firebase, kiểm tra lại thông tin đăng nhập và thử tạo lại các khóa API hoặc thông tin ứng dụng trong Firebase.
-Setup and Run Guide (English)
-1. Clone the Repository
+#Setup and Run Guide (English)
+##1. Clone the Repository
 First, clone the repository to your local machine:
 
 bash
 
 git clone <your-repository-url>
-2. Install Dependencies
+##2. Install Dependencies
 Navigate to the project folder and install the required dependencies:
 
 bash
@@ -93,7 +93,7 @@ bash
 npm install
 # Or if you use Yarn:
 # yarn install
-3. Configure Environment Variables
+##3. Configure Environment Variables
 To make the application work with Firebase and other services, you need to set up the environment variables.
 
 Create the .env File
@@ -132,7 +132,7 @@ REACT_APP_STORAGE_BUCKET=fir-test-236ee.appspot.com
 REACT_APP_MESSAGING_SENDER_ID=699695973700
 REACT_APP_APP_ID=1:699695973700:web:b69a7b1605f4a15ec50311
 REACT_APP_MEASUREMENT_ID=G-0HYMG5FZTV
-4. Run the Project
+##4. Run the Project
 Now that you have set up the environment variables, you can run the project.
 
 For Android:
@@ -147,7 +147,7 @@ For Web (if applicable):
 bash
 
 npm start
-5. Important Notes
+##5. Important Notes
 Never commit your .env file to version control. It contains sensitive information that should be kept private. Ensure that the .env file is added to .gitignore.
 If you are collaborating on this project, always share the setup instructions for the .env file, but never share the .env file directly.
 6. Troubleshooting
