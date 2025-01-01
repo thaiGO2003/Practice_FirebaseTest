@@ -1,160 +1,158 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng Dẫn Cài Đặt Dự Án</title>
-</head>
-<body>
-        <img src="https://github.com/user-attachments/assets/6448dab8-04b3-41c6-9a2f-8f459a3dcca5" alt="Hướng dẫn cài đặt" style="max-width: 100%; height: auto;">
-    <h1>Hướng Dẫn Cài Đặt Dự Án</h1>
+![image](https://github.com/user-attachments/assets/6448dab8-04b3-41c6-9a2f-8f459a3dcca5)
+# Hướng dẫn Cài Đặt và Chạy Dự Án
 
-    <h2>1. Clone repository</h2>
-    <p>Đầu tiên, bạn cần clone repository về máy của mình:</p>
-    <pre><code>git clone &lt;your-repository-url&gt;</code></pre>
+## 1. Clone Repository
 
-    <h2>2. Cài đặt dependencies</h2>
-    <p>Đi tới thư mục dự án và cài đặt tất cả dependencies cần thiết:</p>
-    <pre><code>npm install
+Đầu tiên, bạn cần clone repository về máy của mình:
+
+```bash
+git clone <your-repository-url>
+2. Cài Đặt Dependencies
+Đi đến thư mục dự án và cài đặt các dependencies cần thiết:
+
+bash
+
+npm install
 # Hoặc nếu bạn sử dụng Yarn:
-# yarn install</code></pre>
+# yarn install
+3. Cấu Hình Biến Môi Trường
+Để ứng dụng có thể hoạt động với Firebase và các dịch vụ khác, bạn cần cấu hình các biến môi trường.
 
-    <h2>3. Cấu hình biến môi trường</h2>
-    <p>Để ứng dụng hoạt động với Firebase và các dịch vụ khác, bạn cần cấu hình các biến môi trường.</p>
+Tạo tệp .env
+Các biến môi trường được định nghĩa trong tệp .env. Nếu bạn chưa có tệp .env, bạn có thể tạo nó từ tệp .env.example có sẵn trong thư mục gốc của dự án:
 
-    <h3>Tạo tệp <code>.env</code></h3>
-    <p>Biến môi trường được định nghĩa trong tệp <code>.env</code>. Nếu bạn chưa có tệp <code>.env</code>, bạn có thể tạo một tệp mới từ tệp <code>.env.example</code> trong thư mục gốc của dự án:</p>
-    <pre><code>cp .env.example .env</code></pre>
+bash
 
-    <h3>Thêm thông tin Firebase của bạn</h3>
-    <p>Sau khi tạo tệp <code>.env</code>, bạn mở tệp và thêm các giá trị cấu hình Firebase của mình. Dưới đây là danh sách các biến cần thiết:</p>
-    <pre><code>REACT_APP_API_KEY=your_api_key
+cp .env.example .env
+Thêm Thông Tin Firebase
+Mở tệp .env và thêm các giá trị cấu hình Firebase của bạn. Đây là danh sách các biến cần thiết:
+
+env
+
+REACT_APP_API_KEY=your_api_key
 REACT_APP_AUTH_DOMAIN=your_auth_domain
 REACT_APP_PROJECT_ID=your_project_id
 REACT_APP_STORAGE_BUCKET=your_storage_bucket
 REACT_APP_MESSAGING_SENDER_ID=your_messaging_sender_id
 REACT_APP_APP_ID=your_app_id
-REACT_APP_MEASUREMENT_ID=your_measurement_id</code></pre>
+REACT_APP_MEASUREMENT_ID=your_measurement_id
+Lấy Thông Tin Cấu Hình Firebase
+Để lấy các giá trị này, làm theo các bước sau:
 
-    <h3>Cách lấy thông tin cấu hình Firebase</h3>
-    <p>Để lấy các giá trị này, làm theo các bước sau:</p>
-    <ol>
-        <li>Truy cập <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>.</li>
-        <li>Chọn dự án của bạn hoặc tạo mới nếu cần.</li>
-        <li>Đi tới <strong>Cài đặt Dự án</strong> (biểu tượng bánh răng bên cạnh <strong>Tổng quan Dự án</strong>).</li>
-        <li>Trong phần <strong>Ứng dụng của bạn</strong>, chọn ứng dụng <strong>Web</strong> (hoặc tạo mới nếu cần).</li>
-        <li>Bạn sẽ thấy một đối tượng cấu hình bao gồm các giá trị như <code>apiKey</code>, <code>authDomain</code>, <code>projectId</code>, v.v. Sao chép các giá trị này và dán vào tệp <code>.env</code>.</li>
-    </ol>
+Truy cập vào Firebase Console.
+Chọn dự án của bạn hoặc tạo một dự án mới.
+Đi đến Cài Đặt Dự Án (biểu tượng bánh răng bên cạnh Tổng Quan Dự Án).
+Trong phần Ứng dụng của bạn, chọn ứng dụng Web (hoặc tạo một ứng dụng Web nếu chưa có).
+Bạn sẽ thấy một đối tượng cấu hình bao gồm các giá trị như apiKey, authDomain, projectId, v.v. Sao chép các giá trị này và dán vào tệp .env.
+Ví Dụ:
+env
 
-    <h3>Ví dụ:</h3>
-    <pre><code>REACT_APP_API_KEY=AIzaSyBpTPEoJMu54vDoxQGoRhqVy6ccUiC3Ba4
+REACT_APP_API_KEY=AIzaSyBpTPEoJMu54vDoxQGoRhqVy6ccUiC3Ba4
 REACT_APP_AUTH_DOMAIN=fir-test-236ee.firebaseapp.com
 REACT_APP_PROJECT_ID=fir-test-236ee
 REACT_APP_STORAGE_BUCKET=fir-test-236ee.appspot.com
 REACT_APP_MESSAGING_SENDER_ID=699695973700
 REACT_APP_APP_ID=1:699695973700:web:b69a7b1605f4a15ec50311
-REACT_APP_MEASUREMENT_ID=G-0HYMG5FZTV</code></pre>
+REACT_APP_MEASUREMENT_ID=G-0HYMG5FZTV
+4. Chạy Dự Án
+Bây giờ bạn đã cấu hình các biến môi trường, bạn có thể chạy dự án.
 
-    <h2>4. Chạy dự án</h2>
-    <p>Bây giờ bạn đã cấu hình các biến môi trường, bạn có thể chạy dự án.</p>
+Đối với Android:
+bash
 
-    <h3>Đối với Android:</h3>
-    <pre><code>npx react-native run-android</code></pre>
+npx react-native run-android
+Đối với iOS:
+bash
 
-    <h3>Đối với iOS:</h3>
-    <pre><code>npx react-native run-ios</code></pre>
+npx react-native run-ios
+Đối với Web (nếu có):
+bash
 
-    <h3>Đối với Web (nếu có):</h3>
-    <pre><code>npm start</code></pre>
+npm start
+5. Lưu Ý Quan Trọng
+Không bao giờ commit tệp .env vào hệ thống kiểm soát phiên bản. Nó chứa các thông tin nhạy cảm cần phải được bảo mật. Đảm bảo rằng tệp .env đã được thêm vào .gitignore.
+Nếu bạn đang hợp tác trong dự án, chỉ chia sẻ hướng dẫn thiết lập tệp .env, nhưng không chia sẻ tệp .env trực tiếp.
+6. Khắc Phục Lỗi
+Nếu bạn gặp phải bất kỳ vấn đề nào, hãy kiểm tra các vấn đề sau:
 
-    <h2>5. Lưu ý quan trọng</h2>
-    <ul>
-        <li><strong>Không bao giờ commit tệp <code>.env</code></strong> vào hệ thống quản lý phiên bản. Nó chứa thông tin nhạy cảm và cần được bảo mật. Hãy chắc chắn rằng tệp <code>.env</code> đã được thêm vào <code>.gitignore</code>.</li>
-        <li>Nếu bạn đang làm việc nhóm, <strong>hãy chia sẻ hướng dẫn thiết lập tệp <code>.env</code></strong>, nhưng <strong>không bao giờ chia sẻ tệp <code>.env</code> của bạn</strong> trực tiếp.</li>
-    </ul>
+Đảm bảo rằng bạn đã điền đầy đủ tất cả các biến môi trường trong tệp .env.
+Kiểm tra lại cấu hình Firebase của bạn và đảm bảo bạn đã sao chép chính xác các giá trị từ cài đặt Firebase.
+Nếu có lỗi liên quan đến Firebase, kiểm tra lại thông tin đăng nhập và thử tạo lại các khóa API hoặc thông tin ứng dụng trong Firebase.
+Setup and Run Guide (English)
+1. Clone the Repository
+First, clone the repository to your local machine:
 
-    <h2>6. Khắc phục sự cố</h2>
-    <p>Nếu gặp phải bất kỳ vấn đề nào, vui lòng kiểm tra các điều sau:</p>
-    <ul>
-        <li>Kiểm tra kỹ để chắc chắn rằng bạn đã điền đầy đủ các biến môi trường trong tệp <code>.env</code>.</li>
-        <li>Đảm bảo rằng bạn đã có cấu hình Firebase chính xác từ phần cài đặt Firebase của dự án.</li>
-        <li>Trong trường hợp có lỗi liên quan đến Firebase, hãy kiểm tra lại các thông tin đăng nhập và thử tạo lại các khóa API hoặc thông tin ứng dụng trong Firebase.</li>
-    </ul>
+bash
 
-    <hr>
+git clone <your-repository-url>
+2. Install Dependencies
+Navigate to the project folder and install the required dependencies:
 
-    <h1>Project Setup Guide</h1>
+bash
 
-    <h2>1. Clone the repository</h2>
-    <p>First, you need to clone the repository to your local machine:</p>
-    <pre><code>git clone &lt;your-repository-url&gt;</code></pre>
-
-    <h2>2. Install dependencies</h2>
-    <p>Navigate to the project directory and install all the necessary dependencies:</p>
-    <pre><code>npm install
+npm install
 # Or if you use Yarn:
-# yarn install</code></pre>
+# yarn install
+3. Configure Environment Variables
+To make the application work with Firebase and other services, you need to set up the environment variables.
 
-    <h2>3. Set up environment variables</h2>
-    <p>In order for the application to work with Firebase and other services, you need to configure the environment variables.</p>
+Create the .env File
+The environment variables are defined in the .env file. If you don’t have a .env file, you can create one from the .env.example file in the project root:
 
-    <h3>Create <code>.env</code> file</h3>
-    <p>The environment variables are defined in the <code>.env</code> file. If you don’t already have a <code>.env</code> file, you can create one based on the <code>.env.example</code> file in the root of the project.</p>
-    <pre><code>cp .env.example .env</code></pre>
+bash
 
-    <h3>Add your Firebase credentials</h3>
-    <p>After creating the <code>.env</code> file, open it and add your Firebase configuration values. Here is the list of required variables that need to be set:</p>
-    <pre><code>REACT_APP_API_KEY=your_api_key
+cp .env.example .env
+Add Firebase Credentials
+Open the .env file and add your Firebase configuration values. Here is the list of required variables:
+
+env
+
+REACT_APP_API_KEY=your_api_key
 REACT_APP_AUTH_DOMAIN=your_auth_domain
 REACT_APP_PROJECT_ID=your_project_id
 REACT_APP_STORAGE_BUCKET=your_storage_bucket
 REACT_APP_MESSAGING_SENDER_ID=your_messaging_sender_id
 REACT_APP_APP_ID=your_app_id
-REACT_APP_MEASUREMENT_ID=your_measurement_id</code></pre>
+REACT_APP_MEASUREMENT_ID=your_measurement_id
+How to Get Firebase Configuration
+To get these values, follow these steps:
 
-    <h3>Where to find your Firebase configuration</h3>
-    <p>To get these values, follow these steps:</p>
-    <ol>
-        <li>Go to the <a href="https://console.firebase.google.com/" target="_blank">Firebase Console</a>.</li>
-        <li>Select your project or create a new one.</li>
-        <li>Navigate to <strong>Project Settings</strong> (the gear icon next to <strong>Project Overview</strong>).</li>
-        <li>In the <strong>Your apps</strong> section, select the <strong>Web</strong> app (or create one if necessary).</li>
-        <li>You will see a configuration object that includes <code>apiKey</code>, <code>authDomain</code>, <code>projectId</code>, etc. Copy these values and paste them into your <code>.env</code> file.</li>
-    </ol>
+Go to the Firebase Console.
+Select your project or create a new project.
+Go to Project Settings (the gear icon next to Project Overview).
+In the Your Apps section, select the Web app (or create a web app if needed).
+You will see a configuration object that includes apiKey, authDomain, projectId, etc. Copy these values and paste them into your .env file.
+Example:
+env
 
-    <h3>Example:</h3>
-    <pre><code>REACT_APP_API_KEY=AIzaSyBpTPEoJMu54vDoxQGoRhqVy6ccUiC3Ba4
+REACT_APP_API_KEY=AIzaSyBpTPEoJMu54vDoxQGoRhqVy6ccUiC3Ba4
 REACT_APP_AUTH_DOMAIN=fir-test-236ee.firebaseapp.com
 REACT_APP_PROJECT_ID=fir-test-236ee
 REACT_APP_STORAGE_BUCKET=fir-test-236ee.appspot.com
 REACT_APP_MESSAGING_SENDER_ID=699695973700
 REACT_APP_APP_ID=1:699695973700:web:b69a7b1605f4a15ec50311
-REACT_APP_MEASUREMENT_ID=G-0HYMG5FZTV</code></pre>
+REACT_APP_MEASUREMENT_ID=G-0HYMG5FZTV
+4. Run the Project
+Now that you have set up the environment variables, you can run the project.
 
-    <h2>4. Running the project</h2>
-    <p>Now that you've set up your environment variables, you can run the project.</p>
+For Android:
+bash
 
-    <h3>For Android:</h3>
-    <pre><code>npx react-native run-android</code></pre>
+npx react-native run-android
+For iOS:
+bash
 
-    <h3>For iOS:</h3>
-    <pre><code>npx react-native run-ios</code></pre>
+npx react-native run-ios
+For Web (if applicable):
+bash
 
-    <h3>For Web (if applicable):</h3>
-    <pre><code>npm start</code></pre>
+npm start
+5. Important Notes
+Never commit your .env file to version control. It contains sensitive information that should be kept private. Ensure that the .env file is added to .gitignore.
+If you are collaborating on this project, always share the setup instructions for the .env file, but never share the .env file directly.
+6. Troubleshooting
+If you encounter any issues, check the following:
 
-    <h2>5. Important Notes</h2>
-    <ul>
-        <li><strong>Never commit your <code>.env</code> file</strong> to version control. It contains sensitive information that should be kept private. Make sure that <code>.env</code> is included in the <code>.gitignore</code> file.</li>
-        <li>If you are collaborating on this project, <strong>always share the <code>.env</code> setup instructions</strong>, but <strong>never share your <code>.env</code> file</strong> directly.</li>
-    </ul>
-
-    <h2>6. Troubleshooting</h2>
-    <p>If you encounter any issues, please check the following:</p>
-    <ul>
-        <li>Double-check that you have filled in all the environment variables in the <code>.env</code> file.</li>
-        <li>Ensure that you have the correct Firebase configuration from your Firebase project settings.</li>
-        <li>If there are errors related to Firebase, review the credentials and try regenerating any API keys or app credentials in Firebase.</li>
-    </ul>
-</body>
-</html>
+Double-check that you have filled in all the environment variables in the .env file.
+Ensure that you have the correct Firebase configuration from your Firebase project settings.
+If there are errors related to Firebase, review the credentials and try regenerating any API keys or app credentials in Firebase.
